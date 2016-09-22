@@ -1,0 +1,84 @@
+OK ['craigemailprgm@gmail.com authenticated (Success)']
+Mailboxes:
+['(\\HasNoChildren) "/" "INBOX"', '(\\HasNoChildren) "/" "Testing"', '(\\HasChildren \\Noselect) "/" "[Gmail]"', '(\\All \\HasNoChildren) "/" "[Gmail]/All Mail"', '(\\Drafts \\HasNoChildren) "/" "[Gmail]/Drafts"', '(\\HasNoChildren \\Important) "/" "[Gmail]/Important"', '(\\HasNoChildren \\Sent) "/" "[Gmail]/Sent Mail"', '(\\HasNoChildren \\Junk) "/" "[Gmail]/Spam"', '(\\Flagged \\HasNoChildren) "/" "[Gmail]/Starred"', '(\\HasNoChildren \\Trash) "/" "[Gmail]/Trash"']
+Processing mailbox...
+
+Message:  From nobody Sun Sep 18 19:27:12 2016
+Delivered-To: craigemailprgm@gmail.com
+Received: by 10.31.16.23 with SMTP id g23csp642548vki;
+ Sun, 18 Sep 2016 12:00:58 -0700 (PDT)
+X-Received: by 10.200.37.111 with SMTP id 44mr26632219qtn.17.1474225258739;
+ Sun, 18 Sep 2016 12:00:58 -0700 (PDT)
+Return-Path: <4048054545@vzwpix.com>
+Received: from njbrspamp7.vtext.com (njbrspamp7.vtext.com. [69.78.129.152])
+ by mx.google.com with ESMTPS id g134si15676322qka.82.2016.09.18.12.00.58
+ for <craigemailprgm@gmail.com>
+ (version=TLS1 cipher=AES128-SHA bits=128/128);
+ Sun, 18 Sep 2016 12:00:58 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 4048054545@vzwpix.com designates
+ 69.78.129.152 as permitted sender) client-ip=69.78.129.152; 
+Authentication-Results: mx.google.com;
+ spf=pass (google.com: domain of 4048054545@vzwpix.com designates 69.78.129.152
+ as permitted sender) smtp.mailfrom=4048054545@vzwpix.com
+Received: from 167.sub-69-78-32.myvzw.com (HELO m02.vzwpix.com)
+ ([69.78.32.167])
+ by njbrspamp7.vtext.com with SMTP; 18 Sep 2016 19:00:58 +0000
+From: 4048054545@vzwpix.com
+To: craigemailprgm@gmail.com
+Subject: 
+Message-ID: <212340985258388811@-212340985258388812>
+Date: Sun, 18 Sep 2016 19:00:58 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed; type="application/smil";
+ boundary="__CONTENT_64564_PART_BOUNDARY__33243242__"
+
+--__CONTENT_64564_PART_BOUNDARY__33243242__
+Content-Type: text/plain; charset=us-ascii
+Content-ID: <0>
+Content-Disposition: attachment;
+ filename="text_0.txt"
+Content-Location: text_0.txt
+
+This is a message
+--__CONTENT_64564_PART_BOUNDARY__33243242__--
+
+
+Message:  From nobody Sun Sep 18 19:27:12 2016
+Delivered-To: craigemailprgm@gmail.com
+Received: by 10.31.16.23 with SMTP id g23csp646744vki;
+ Sun, 18 Sep 2016 12:14:44 -0700 (PDT)
+X-Received: by 10.202.4.137 with SMTP id 131mr26242749oie.128.1474226084523;
+ Sun, 18 Sep 2016 12:14:44 -0700 (PDT)
+Return-Path: <4048054545@vzwpix.com>
+Received: from txslspamp1.vtext.com (txslspamp1.vtext.com. [69.78.67.194])
+ by mx.google.com with ESMTPS id q32si17036732otb.1.2016.09.18.12.14.44
+ for <craigemailprgm@gmail.com>
+ (version=TLS1 cipher=AES128-SHA bits=128/128);
+ Sun, 18 Sep 2016 12:14:44 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 4048054545@vzwpix.com designates
+ 69.78.67.194 as permitted sender) client-ip=69.78.67.194; 
+Authentication-Results: mx.google.com;
+ spf=pass (google.com: domain of 4048054545@vzwpix.com designates 69.78.67.194
+ as permitted sender) smtp.mailfrom=4048054545@vzwpix.com
+Received: from 39.sub-69-78-81.myvzw.com (HELO m01.vzwpix.com) ([69.78.81.39])
+ by txslspamp1.vtext.com with SMTP; 18 Sep 2016 19:14:44 +0000
+From: 4048054545@vzwpix.com
+To: craigemailprgm@gmail.com
+Subject: 
+Message-ID: <212340986084297007@-212340986084297008>
+Date: Sun, 18 Sep 2016 19:14:44 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed; type="application/smil";
+ boundary="__CONTENT_64564_PART_BOUNDARY__33243242__"
+
+--__CONTENT_64564_PART_BOUNDARY__33243242__
+Content-Type: text/plain; charset=us-ascii
+Content-ID: <0>
+Content-Disposition: attachment;
+ filename="text_0.txt"
+Content-Location: text_0.txt
+
+This is another message
+--__CONTENT_64564_PART_BOUNDARY__33243242__--
+
+
