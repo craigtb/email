@@ -45,15 +45,29 @@ def process_mailbox(M):
         #print 'Raw Date:', msg['Date']
 	#print 'Message: ', msg
 	stuff = str(msg)
-	arr = stuff.split('Content-Location: text_0.txt\n\n', 1)
-	arr2 = arr[1].split('\n--__', 1)
-	message = arr2[0]
-        msgfrom = "Unknown"
-	print 'Message? :',arr2[0]
+	cell_provider_arr = msg['From'].split('@')
+	print(cell_provider_arr[1])
+	message = ""
+	arr2 = []
+	if cell_provider_arr[1] == 'vzwpix.com':
+		print "its from verizon"
+		arr = stuff.split('Content-Location: text_0.txt\n\n', 1)
+		arr2 = arr[1].split('\n--__', 1)
+		message = arr2[0]
+	elif cell_provider_arr[1] == 'mms.att.net':
+		print "its from att"
+		arr = stuff.split('<td>', 1)
+		arr_att = arr[1].split('</td>')
+		message = arr_att[0].strip()
+        
+	msgfrom = "Unknown"
+	print 'Message? :',message
 	if  msg['From'] == '4048054545@vzwpix.com' :
 		msgfrom = 'Craig'
 	elif msg['From'] == '3343982141@vzwpix.com' :
 		msgfrom = 'Neely'
+	elif msg['From'] == '4043233229@mms.att.net' :
+		msgfrom = 'Frank'
 	else :
 		msgfrom = 'Unknown'
 	query = "INSERT INTO test.post (name, message) values ('%s', '%s')" % (msgfrom, message)
@@ -61,28 +75,30 @@ def process_mailbox(M):
 	cursor.execute(query)
 	cnx.commit()
 
+while True:
 
-M = imaplib.IMAP4_SSL('imap.gmail.com')
+	M = imaplib.IMAP4_SSL('imap.gmail.com')
 
-try:
-    rv, data = M.login(EMAIL_ACCOUNT, 'craig1234')
-except imaplib.IMAP4.error:
-    print "LOGIN FAILED!!! "
-    sys.exit(1)
+	try:
+	    rv, data = M.login(EMAIL_ACCOUNT, 'craig1234')
+	except imaplib.IMAP4.error:
+	    print "LOGIN FAILED!!! "
+	    sys.exit(1)
 
-print rv, data
+	print rv, data
 
-rv, mailboxes = M.list()
-if rv == 'OK':
-    print "Mailboxes:"
-    print mailboxes
+	rv, mailboxes = M.list()
+	if rv == 'OK':
+	    print "Mailboxes:"
+	    print mailboxes
 
-rv, data = M.select(EMAIL_FOLDER)
-if rv == 'OK':
-    print "Processing mailbox...\n"
-    process_mailbox(M)
-    M.close()
-else:
-    print "ERROR: Unable to open mailbox ", rv
+	rv, data = M.select(EMAIL_FOLDER)
+	if rv == 'OK':
+	    print "Processing mailbox...\n"
+	    process_mailbox(M)
+	    M.close()
+	else:
+	    print "ERROR: Unable to open mailbox ", rv
 
-M.logout()
+	M.logout()
+	time.sleep(60)
